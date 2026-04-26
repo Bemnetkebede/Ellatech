@@ -2,7 +2,7 @@
 
 This is a premium, high-performance mobile application designed for efficient inventory tracking and stock management. Built with React Native and Expo, it offers a stunning, distraction-free user experience tailored for speed and reliability.
 
-![Banner](https://images.unsplash.com/photo-1586769852836-bc069f19e1b6?auto=format&fit=crop&q=80&w=2000)
+
 
 ## ✨ Key Features
 
@@ -58,7 +58,6 @@ To make your README look truly professional with your 8 screenshots, follow thes
 2. **Move your files**: Place your 8 images inside that folder (e.g., `dashboard.png`, `registration.png`, etc.).
 3. **Link them in Markdown**: Use the following syntax to display them in a beautiful grid:
 
-```markdown
 ### 📱 App Showcase
 
 <p align="center">
