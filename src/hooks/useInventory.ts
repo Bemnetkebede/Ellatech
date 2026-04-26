@@ -7,7 +7,7 @@ export interface UseInventoryReturn {
   lastUpdated: Date | null;
   registerProduct: (product: Omit<Product, 'stockQuantity'> & { initialStock?: number }) => void;
   adjustStock: (sku: string, amount: number, type: TransactionType) => void;
-  getTransactionHistory: (page: number, limit: number) => {
+  getTransactionHistory: (sku: string | undefined, page: number, limit: number) => {
     data: Transaction[];
     total: number;
     page: number;
@@ -63,10 +63,6 @@ export const useInventory = (): UseInventoryReturn => {
         throw new Error(`Insufficient stock for product ${sku}. Cannot reduce below zero.`);
       }
 
-      // If validation passes, we update the transactions state.
-      // We do it safely inside the state setter to ensure we don't have race conditions,
-      // though typically this is fine outside if we used the closure's state. 
-      // Doing it here ensures the transaction is only recorded if the product update is successful.
       const newTransaction: Transaction = {
         id: `${Date.now()}-${Math.random().toString(36).substr(2, 9)}`,
         productSku: sku,
@@ -87,21 +83,24 @@ export const useInventory = (): UseInventoryReturn => {
     });
   }, []);
 
-  const getTransactionHistory = useCallback((page: number = 1, limit: number = 10) => {
+  const getTransactionHistory = useCallback((sku?: string, page: number = 1, limit: number = 10) => {
+    const filteredTransactions = sku 
+      ? transactions.filter(t => t.productSku === sku)
+      : transactions;
+
     const startIndex = (page - 1) * limit;
     const endIndex = startIndex + limit;
     
     return {
-      data: transactions.slice(startIndex, endIndex),
-      total: transactions.length,
+      data: filteredTransactions.slice(startIndex, endIndex),
+      total: filteredTransactions.length,
       page,
       limit,
-      totalPages: Math.ceil(transactions.length / limit)
+      totalPages: Math.ceil(filteredTransactions.length / limit)
     };
   }, [transactions]);
 
   return {
-    // Return products as an array for easier rendering
     products: Object.values(products),
     transactions,
     lastUpdated,
