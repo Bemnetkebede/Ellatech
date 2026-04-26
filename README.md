@@ -53,13 +53,16 @@ Once the server is running:
 ### 📱 App Showcase
 
 <p align="center">
-  <img src="./assets/screenshots/photo_1_2026-04-26_13-44-23.jpg" width="180" />
-  <img src="./assets/screenshots/photo_2_2026-04-26_13-44-23.jpg" width="180" />
-  <img src="./assets/screenshots/photo_3_2026-04-26_13-44-23.jpg" width="180" />
+  <img src="./assets/screenshots/photo_1_2026-04-26_13-44-23.jpg" width="180" /> &nbsp;&nbsp;
+  <img src="./assets/screenshots/photo_2_2026-04-26_13-44-23.jpg" width="180" /> &nbsp;&nbsp;
+  <img src="./assets/screenshots/photo_3_2026-04-26_13-44-23.jpg" width="180" /> &nbsp;&nbsp;
   <img src="./assets/screenshots/photo_4_2026-04-26_13-44-23.jpg" width="180" />
-  <img src="./assets/screenshots/photo_5_2026-04-26_13-44-23.jpg" width="180" />
-  <img src="./assets/screenshots/photo_6_2026-04-26_13-44-23.jpg" width="180" />
-  <img src="./assets/screenshots/photo_7_2026-04-26_13-44-23.jpg" width="180" />
+</p>
+
+<p align="center">
+  <img src="./assets/screenshots/photo_5_2026-04-26_13-44-23.jpg" width="180" /> &nbsp;&nbsp;
+  <img src="./assets/screenshots/photo_6_2026-04-26_13-44-23.jpg" width="180" /> &nbsp;&nbsp;
+  <img src="./assets/screenshots/photo_7_2026-04-26_13-44-23.jpg" width="180" /> &nbsp;&nbsp;
   <img src="./assets/screenshots/photo_8_2026-04-26_13-44-23.jpg" width="180" />
 </p>
 
