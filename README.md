@@ -1,6 +1,6 @@
 # Inventory Management System
 
-This is a premium, high-performance mobile application designed for efficient inventory tracking and stock management. Built with React Native and Expo, it offers a stunning, distraction-free user experience tailored for speed and reliability.
+This is mobile application designed for efficient inventory tracking and stock management. Built with React Native and Expo, it offers a stunning, distraction-free user experience tailored for speed and reliability.
 
 ## ✨ Key Features
 
@@ -53,11 +53,14 @@ Once the server is running:
 ### 📱 App Showcase
 
 <p align="center">
-  <img src="./assets/screenshots/registration.png" width="180" />
-  <img src="./assets/screenshots/history.png" width="180" />
-  <img src="./assets/screenshots/product_detail.png" width="180" />
-  <img src="./assets/screenshots/success_popup.png" width="180" />
-  <img src="./assets/screenshots/error_popup.png" width="180" />
+  <img src="./assets/screenshots/photo_1_2026-04-26_13-44-23.jpg" width="180" />
+  <img src="./assets/screenshots/photo_2_2026-04-26_13-44-23.jpg" width="180" />
+  <img src="./assets/screenshots/photo_3_2026-04-26_13-44-23.jpg" width="180" />
+  <img src="./assets/screenshots/photo_4_2026-04-26_13-44-23.jpg" width="180" />
+  <img src="./assets/screenshots/photo_5_2026-04-26_13-44-23.jpg" width="180" />
+  <img src="./assets/screenshots/photo_6_2026-04-26_13-44-23.jpg" width="180" />
+  <img src="./assets/screenshots/photo_7_2026-04-26_13-44-23.jpg" width="180" />
+  <img src="./assets/screenshots/photo_8_2026-04-26_13-44-23.jpg" width="180" />
 </p>
 
 ---
