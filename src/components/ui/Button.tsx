@@ -1,5 +1,5 @@
 import React from 'react';
-import { TouchableOpacity, Text, TouchableOpacityProps, ActivityIndicator } from 'react-native';
+import { TouchableOpacity, Text, TouchableOpacityProps, ActivityIndicator, StyleSheet } from 'react-native';
 
 interface ButtonProps extends TouchableOpacityProps {
   label: string;
@@ -11,38 +11,36 @@ export const Button = ({
   label,
   variant = 'primary',
   isLoading = false,
-  className,
+  style,
   ...props
 }: ButtonProps) => {
   const getVariantStyle = () => {
     switch (variant) {
       case 'secondary':
-        return 'bg-blue-100 border border-blue-200';
+        return styles.secondary;
       case 'outline':
-        return 'bg-transparent border border-gray-300';
+        return styles.outline;
       case 'primary':
       default:
-        return 'bg-[#1a3f75]'; // Match the deep blue from the reference
+        return styles.primary;
     }
   };
 
   const getTextStyle = () => {
     switch (variant) {
       case 'secondary':
-        return 'text-[#1a3f75]';
+        return styles.textSecondary;
       case 'outline':
-        return 'text-gray-700';
+        return styles.textOutline;
       case 'primary':
       default:
-        return 'text-white';
+        return styles.textPrimary;
     }
   };
 
   return (
     <TouchableOpacity
-      className={`w-full h-14 rounded-2xl items-center justify-center flex-row ${getVariantStyle()} ${
-        props.disabled ? 'opacity-50' : ''
-      } ${className || ''}`}
+      style={[styles.base, getVariantStyle(), props.disabled && styles.disabled, style]}
       activeOpacity={0.8}
       disabled={props.disabled || isLoading}
       {...props}
@@ -50,10 +48,29 @@ export const Button = ({
       {isLoading ? (
         <ActivityIndicator color={variant === 'primary' ? 'white' : '#1a3f75'} />
       ) : (
-        <Text className={`font-semibold text-lg ${getTextStyle()}`}>
+        <Text style={[styles.textBase, getTextStyle()]}>
           {label}
         </Text>
       )}
     </TouchableOpacity>
   );
 };
+
+const styles = StyleSheet.create({
+  base: {
+    width: '100%',
+    height: 56,
+    borderRadius: 16,
+    alignItems: 'center',
+    justifyContent: 'center',
+    flexDirection: 'row',
+  },
+  primary: { backgroundColor: '#1a3f75' },
+  secondary: { backgroundColor: '#dbeafe', borderWidth: 1, borderColor: '#bfdbfe' },
+  outline: { backgroundColor: 'transparent', borderWidth: 1, borderColor: '#d1d5db' },
+  disabled: { opacity: 0.5 },
+  textBase: { fontSize: 18, fontWeight: '600' },
+  textPrimary: { color: 'white' },
+  textSecondary: { color: '#1a3f75' },
+  textOutline: { color: '#374151' },
+});

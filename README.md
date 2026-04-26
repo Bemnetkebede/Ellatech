@@ -1,50 +1,71 @@
-# Welcome to your Expo app 👋
+# Inventory Management System
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+This is a premium, high-performance mobile application designed for efficient inventory tracking and stock management. Built with React Native and Expo, it offers a stunning, distraction-free user experience tailored for speed and reliability.
 
-## Get started
+![Banner](https://images.unsplash.com/photo-1586769852836-bc069f19e1b6?auto=format&fit=crop&q=80&w=2000)
 
-1. Install dependencies
+## ✨ Key Features
 
+- **Premium Branding**: Custom-designed registration and dashboard interfaces with a sophisticated deep blue aesthetic.
+- **Smart Filtering**: Fast, inline dropdowns for Status and Category filtering—no more clunky bottom sheets.
+- **Real-time Stock Control**: Effortlessly adjust stock quantities with satisfying, high-end visual feedback.
+- **Dynamic Header**: Intelligent right-aligned navigation that maximizes content space on any screen.
+- **Transaction History**: Full transparency with detailed logs of every stock movement.
+- **Optimized for Android**: Battle-tested stability using native performance styles to bypass common React Native rendering bugs.
+
+## 🚀 Getting Started
+
+Follow these steps to get your local development environment up and running.
+
+### Prerequisites
+
+- [Node.js](https://nodejs.org/) (v18 or newer)
+- [npm](https://www.npmjs.com/)
+- [Expo Go](https://expo.dev/go) app on your mobile device (for testing)
+
+### Installation
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/Bemnetkebede/Ellatech
+   cd my-app
+   ```
+
+2. **Install dependencies:**
    ```bash
    npm install
    ```
 
-2. Start the app
+### Running the App
 
-   ```bash
-   npx expo start
-   ```
-
-In the output, you'll find options to open the app in a
-
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
-
+Start the development server:
 ```bash
-npm run reset-project
+npm start
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+Once the server is running:
+- **Android**: Press `a` to open in an emulator or scan the QR code with the Expo Go app.
+- **iOS**: Press `i` to open in a simulator or scan the QR code with the Camera app.
+- **Web**: Press `w` to open in your browser.
 
-## Learn more
+---
 
-To learn more about developing your project with Expo, look at the following resources:
+## 🖼️ Attaching Your UI Screenshots
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+To make your README look truly professional with your 8 screenshots, follow these steps:
 
-## Join the community
+1. **Organize your images**: Create a folder named `screenshots` in the root of your project.
+2. **Move your files**: Place your 8 images inside that folder (e.g., `dashboard.png`, `registration.png`, etc.).
+3. **Link them in Markdown**: Use the following syntax to display them in a beautiful grid:
 
-Join our community of developers creating universal apps.
+```markdown
+### 📱 App Showcase
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+<p align="center">
+  <img src="./screenshots/registration.png" width="200" />
+  <img src="./screenshots/dashboard.png" width="200" />
+  <img src="./screenshots/product_detail.png" width="200" />
+  <img src="./screenshots/success_popup.png" width="200" />
+</p>
+```
+

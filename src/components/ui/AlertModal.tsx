@@ -21,23 +21,23 @@ export const AlertModal = ({ visible, title, message, onClose }: AlertModalProps
         style={styles.overlay} 
         onPress={onClose}
       >
-        <View className="w-[85%] bg-white rounded-[32px] p-8 shadow-2xl items-center border border-red-50">
-          <View className="w-16 h-16 bg-red-100 rounded-full items-center justify-center mb-6">
-            <Text className="text-red-600 text-3xl font-bold">!</Text>
+        <View style={styles.alertCard}>
+          <View style={styles.iconCircle}>
+            <Text style={styles.iconText}>!</Text>
           </View>
           
-          <Text className="text-2xl font-bold text-gray-800 mb-2 text-center">
+          <Text style={styles.title}>
             {title}
           </Text>
           
-          <Text className="text-gray-500 text-center mb-8 text-base leading-6">
+          <Text style={styles.message}>
             {message}
           </Text>
           
           <Button 
             label="Got it" 
             onPress={onClose} 
-            className="bg-red-600 h-14 rounded-2xl"
+            style={styles.actionBtn}
           />
         </View>
       </Pressable>
@@ -48,8 +48,55 @@ export const AlertModal = ({ visible, title, message, onClose }: AlertModalProps
 const styles = StyleSheet.create({
   overlay: {
     flex: 1,
-    backgroundColor: 'rgba(0, 0, 0, 0.7)', // Standard dark dimmed background
+    backgroundColor: 'rgba(0, 0, 0, 0.7)',
     justifyContent: 'center',
     alignItems: 'center',
   },
+  alertCard: {
+    width: '85%',
+    backgroundColor: 'white',
+    borderRadius: 32,
+    padding: 32,
+    alignItems: 'center',
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 10 },
+    shadowOpacity: 0.1,
+    shadowRadius: 20,
+    elevation: 5,
+    borderWidth: 1,
+    borderColor: '#fee2e2',
+  },
+  iconCircle: {
+    width: 64,
+    height: 64,
+    backgroundColor: '#fee2e2',
+    borderRadius: 32,
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginBottom: 24,
+  },
+  iconText: {
+    color: '#dc2626',
+    fontSize: 32,
+    fontWeight: 'bold',
+  },
+  title: {
+    fontSize: 24,
+    fontWeight: 'bold',
+    color: '#1f2937',
+    marginBottom: 8,
+    textAlign: 'center',
+  },
+  message: {
+    fontSize: 16,
+    color: '#6b7280',
+    textAlign: 'center',
+    marginBottom: 32,
+    lineHeight: 24,
+  },
+  actionBtn: {
+    backgroundColor: '#dc2626',
+    height: 56,
+    borderRadius: 16,
+  }
 });

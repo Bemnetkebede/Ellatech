@@ -28,37 +28,36 @@ export const ProfileModal = ({ visible, user, onClose, onLogout }: ProfileModalP
       onRequestClose={onClose}
     >
       <Pressable style={styles.overlay} onPress={onClose}>
-        <View className="w-[85%] bg-white rounded-[40px] p-8 shadow-2xl items-center border border-gray-100">
-          <View className="w-24 h-24 bg-[#1a3f75] rounded-full items-center justify-center mb-6 shadow-xl">
-            <Text className="text-white text-3xl font-black">{initials}</Text>
+        <View style={styles.profileCard}>
+          <View style={styles.initialsCircle}>
+            <Text style={styles.initialsText}>{initials}</Text>
           </View>
           
-          <Text className="text-2xl font-bold text-gray-800 mb-1 text-center">
+          <Text style={styles.userName}>
             {user.name}
           </Text>
           
-          <View className="flex-row items-center mb-8">
+          <View style={styles.emailRow}>
             <Ionicons name="mail-outline" size={16} color="#9ca3af" />
-            <Text className="text-gray-400 ml-2 text-base">
+            <Text style={styles.emailText}>
               {user.email}
             </Text>
           </View>
 
-          <View className="w-full h-[1px] bg-gray-100 mb-8" />
+          <View style={styles.divider} />
           
           <Button 
             label="Log Out" 
             onPress={() => { onClose(); onLogout(); }} 
             variant="outline"
-            className="h-14 rounded-2xl mb-4 border-red-100"
-            textClassName="text-red-500"
+            style={styles.logoutBtn}
           />
 
           <Button 
             label="Close Profile" 
             onPress={onClose} 
             variant="primary"
-            className="h-14 rounded-2xl"
+            style={styles.closeBtn}
           />
         </View>
       </Pressable>
@@ -73,4 +72,70 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
+  profileCard: {
+    width: '85%',
+    backgroundColor: 'white',
+    borderRadius: 40,
+    padding: 32,
+    alignItems: 'center',
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 10 },
+    shadowOpacity: 0.1,
+    shadowRadius: 20,
+    elevation: 5,
+    borderWidth: 1,
+    borderColor: '#f3f4f6',
+  },
+  initialsCircle: {
+    width: 96,
+    height: 96,
+    backgroundColor: '#1a3f75',
+    borderRadius: 48,
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginBottom: 24,
+    shadowColor: '#1a3f75',
+    shadowOffset: { width: 0, height: 8 },
+    shadowOpacity: 0.2,
+    shadowRadius: 16,
+    elevation: 8,
+  },
+  initialsText: {
+    color: 'white',
+    fontSize: 32,
+    fontWeight: '900',
+  },
+  userName: {
+    fontSize: 24,
+    fontWeight: 'bold',
+    color: '#1f2937',
+    marginBottom: 4,
+    textAlign: 'center',
+  },
+  emailRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginBottom: 32,
+  },
+  emailText: {
+    color: '#9ca3af',
+    marginLeft: 8,
+    fontSize: 16,
+  },
+  divider: {
+    width: '100%',
+    height: 1,
+    backgroundColor: '#f3f4f6',
+    marginBottom: 32,
+  },
+  logoutBtn: {
+    height: 56,
+    borderRadius: 16,
+    marginBottom: 16,
+    borderColor: '#fee2e2',
+  },
+  closeBtn: {
+    height: 56,
+    borderRadius: 16,
+  }
 });

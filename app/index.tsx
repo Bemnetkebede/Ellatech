@@ -53,7 +53,7 @@ const UserRegistration = ({ onRegister }: { onRegister: (name: string, email: st
               <View style={styles.regLogo}>
                 <Ionicons name="cube" size={24} color="white" />
               </View>
-              <Text style={styles.regTitle}>Ellatech</Text>
+              <Text style={styles.regTitle}>Inventory</Text>
               <Text style={styles.regSubtitle}>Inventory management made simple.</Text>
             </View>
 
