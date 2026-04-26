@@ -2,8 +2,6 @@
 
 This is a premium, high-performance mobile application designed for efficient inventory tracking and stock management. Built with React Native and Expo, it offers a stunning, distraction-free user experience tailored for speed and reliability.
 
-
-
 ## ✨ Key Features
 
 - **Premium Branding**: Custom-designed registration and dashboard interfaces with a sophisticated deep blue aesthetic.
@@ -50,21 +48,16 @@ Once the server is running:
 
 ---
 
-## 🖼️ Attaching Your UI Screenshots
 
-To make your README look truly professional with your 8 screenshots, follow these steps:
-
-1. **Organize your images**: Create a folder named `screenshots` in the root of your project.
-2. **Move your files**: Place your 8 images inside that folder (e.g., `dashboard.png`, `registration.png`, etc.).
-3. **Link them in Markdown**: Use the following syntax to display them in a beautiful grid:
 
 ### 📱 App Showcase
 
 <p align="center">
-  <img src="./screenshots/registration.png" width="200" />
-  <img src="./screenshots/dashboard.png" width="200" />
-  <img src="./screenshots/product_detail.png" width="200" />
-  <img src="./screenshots/success_popup.png" width="200" />
+  <img src="./assets/screenshots/registration.png" width="180" />
+  <img src="./assets/screenshots/history.png" width="180" />
+  <img src="./assets/screenshots/product_detail.png" width="180" />
+  <img src="./assets/screenshots/success_popup.png" width="180" />
+  <img src="./assets/screenshots/error_popup.png" width="180" />
 </p>
-```
 
+---
